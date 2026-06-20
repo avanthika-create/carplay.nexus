@@ -13,11 +13,16 @@ body {
     z-index: -1;
 }
 
-.car { 
+.main-title { 
+    width: 500px;
+    align-items: center;
+    margin-top:10px;
+}
+
+.navigatehomedisplay { 
     position: fixed;
-    object-fit: cover;
-    width: 100%;
-    height: 80%;
-    top: 100px;
-    z-index: 2;
+}
+
+.playgamesdisplay { 
+    position: fixed;
 }
