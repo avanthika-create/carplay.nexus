@@ -117,7 +117,6 @@ document.addEventListener('DOMContentLoaded', () => {
          const nextBtn = document.getElementById("next-level");
             nextBtn.style.display = "block";
             result.textContent= "";
-
         }
     }
 
