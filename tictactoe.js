@@ -54,8 +54,8 @@ function cellClicked() {
 function placeImage(cell, player) {
     const img = document.createElement("img");
     img.src = player === "X"
-        ? "assets/clip1.png"
-        : "assets/clip2.png";
+        ? "assets/clipo.png"
+        : "assets/clipx.png";
 
     img.classList.add("piece");
     cell.appendChild(img);
