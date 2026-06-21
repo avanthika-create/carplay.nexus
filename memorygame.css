@@ -1,9 +1,17 @@
  .memory-game{
     text-align: center;
-    background: url(assets/background-memorygame.png);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
+
+.memory-background { 
+    position: fixed;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: -0.25px;
+    left: 0.25px;
+}
+
 
 .title-memorygame {
     display: flex;

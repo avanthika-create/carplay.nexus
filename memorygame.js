@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const board = document.querySelector('.board');
     const result = document.querySelector('#score');
     const placeholder = 'assets/question-clip.png';
-    const blank = 'happy-clip.png';
+    const blank = 'assets/happy-clip.png';
 
     let cardsChosen = [];
     let cardsChosenId = [];
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cards[id2].removeEventListener('click', flipCard);
 
             cardsMatched.push(cardsChosen);
-            const audio = document.getElementById('assets/right-sound');
+            const audio = document.getElementById('assets/right-sound.mp3');
             if (audio) {
                 audio.playbackRate = 1.5;
                 audio.volume = 1;
@@ -100,7 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
             cards[id1].setAttribute('src', placeholder);
             cards[id2].setAttribute('src', placeholder);
 
-            const audio = document.getElementById('assets/mistake-sound');
+            const audio = document.getElementById('assets/mistake-sound.mp3');
             if (audio) {
                 audio.playbackRate = 1.7;
                 audio.volume = 1;
@@ -108,24 +108,22 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // reset selección
         cardsChosen = [];
         cardsChosenId = [];
 
-        // actualizar score
         result.textContent = cardsMatched.length;
 
-        // ganar
         if (cardsMatched.length === cardArray.length / 2) {
-            const nextBtn = document.getElementById("next-level");
+         const nextBtn = document.getElementById("next-level");
             nextBtn.style.display = "block";
-            result.textContent= "Congrats, you can continue";
-            
+            result.textContent= "";
+
         }
     }
 
     createBoard();
-    function nextLevel() {
-    window.location.href = "house.html";
-}
+     document.getElementById("next-level").addEventListener("click", () => {
+    window.location.href = "index.html"; 
+     });
+
 });
