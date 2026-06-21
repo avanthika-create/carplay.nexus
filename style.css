@@ -2,27 +2,108 @@ body {
     margin: 0;
     overflow: hidden;
     background: black;
-   scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
-.background { 
-    position: fixed;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
+.background-video { 
+    position: fixed; 
     z-index: -1;
+    height: 125%; 
+    width: 111.25%;
+}
+
+.car { 
+    position: fixed; 
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.map {
+    z-index: 3;
+    position: fixed;
+    width: 40%;
+    height: 40%;
+    left: 390px;
+    top: 270px;
 }
 
 .main-title { 
     width: 500px;
-    align-items: center;
+    position: fixed;
     margin-top:10px;
+    z-index: 3;
+    transition: transform 0.3s ease;
+}
+
+.main-title:hover { 
+    transform: scale(1.08) translateY(-5px);
+
 }
 
 .navigatehomedisplay { 
     position: fixed;
+    width: 250px;
+    top: 350px;
+    right: 230px;
+    transition: transform 0.3s ease;
+    z-index: 5;
 }
 
-.playgamesdisplay { 
-    position: fixed;
+.navigatehomedisplay:hover { 
+    transform: scale(1.08) translateY(-5px); 
 }
+
+.pinhome {
+    z-index: 999;
+    position: absolute;
+}
+
+.pintictactoe,
+.pinhome, 
+.pinmemory {
+    z-index: 999;
+    position: absolute;
+    width: 100px;
+    animation: pulse 1.5s infinite;
+}
+
+.pintictactoe { 
+    top: 250px; 
+    left: 600px;
+}
+
+
+.pinmemory { 
+    top: 330px; 
+    left: 500px;
+}
+
+.pinhome { 
+    top: 420px;
+    left: 700px;
+}
+
+/* .pintictactoe:hover,
+.pinhome:hover, 
+.pinmemory:hover {
+   transform: scale(1.08) translateY(-5px);
+} */
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0px rgba(0, 255, 255, 0));
+    }
+
+    50% {
+        transform: scale(1.15);
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.8));
+    }
+
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 0px rgba(0, 255, 255, 0));
+    }
+}
+
