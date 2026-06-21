@@ -9,3 +9,5 @@ The second location mark takes you to the Golden Gate Bridge where you play a me
 The last location mark is a house. You made it, you are home! Click on the location pin it brings you back into the car.
 
 <img width="947" height="467" alt="image" src="https://github.com/user-attachments/assets/1039a453-8ab1-4f50-8a65-ddc3677d2c9c" />
+
+Demo link: https://avanthika-create.github.io/carplay.nexus/
